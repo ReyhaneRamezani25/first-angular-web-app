@@ -23,6 +23,10 @@ export class App {
     { id: 10, name: "speaker", price: 90, category: "accessories" }
   ]
 
+  techNum : number = this.productList.filter(p => p.category==="technology").length;
+  accessNum : number = this.productList.filter(p => p.category==="accessories").length;
+  fashionNum : number = this.productList.filter(p => p.category==="fashion").length;
+
   products = this.productList;
   filterProducts(category : string) : void{
     this.products = this.productList.filter(p => p.category===category)
